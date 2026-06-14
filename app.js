@@ -409,16 +409,26 @@ function posterize(v){const poster=v.getAttribute('poster');if(!poster)return;
   img.style.cssText='width:100%;height:100%;object-fit:cover;position:absolute;inset:0';v.replaceWith(img);}
 function optimizeVideos(){
   document.querySelectorAll('video').forEach(v=>{
-    v.muted=true;v.setAttribute('playsinline','');v.preload='none';
-    // phones, OR the 3-layer worlds switcher (3 videos decoding at once = jank) → static poster
-    if(SMALL || v.closest('.worlds-stage')){ posterize(v); return; }
-    // desktop hero/why: load + play only when mostly on-screen; pause otherwise (one decode at a time)
+    v.muted=true;v.setAttribute('playsinline','');v.setAttribute('disablepictureinpicture','');v.preload='none';
+  });
+  // hero + why (standalone videos): load + play only while ~on-screen, pause off — one decode at a time
+  document.querySelectorAll('video').forEach(v=>{
+    if(v.closest('.worlds-stage'))return;                 // worlds handled separately below
     let loaded=false;
     new IntersectionObserver(es=>es.forEach(e=>{
-      if(e.isIntersecting){ if(!loaded){v.preload='auto';v.load();loaded=true;} v.play().catch(()=>{}); }
+      if(e.isIntersecting && e.intersectionRatio>=0.35){ if(!loaded){v.preload='auto';v.load();loaded=true;} v.play().catch(()=>{}); }
       else v.pause();
-    }),{threshold:.4}).observe(v);
+    }),{threshold:[0,0.35]}).observe(v);
   });
+  // worlds switcher: only the ACTIVE layer's video decodes, and only while the stage is on screen
+  const stage=document.getElementById('stage');
+  if(stage){
+    new IntersectionObserver(es=>es.forEach(e=>{
+      const v=stage.querySelector('.layer.active video');
+      if(e.isIntersecting){ if(v){ if(v.preload==='none'){v.preload='auto';v.load();} v.play().catch(()=>{}); } }
+      else stage.querySelectorAll('video').forEach(x=>x.pause());
+    }),{threshold:.25}).observe(stage);
+  }
 }
 
 /* ---------- shared init ---------- */
