@@ -409,7 +409,9 @@ function posterize(v){const poster=v.getAttribute('poster');if(!poster)return;
   img.style.cssText='width:100%;height:100%;object-fit:cover;position:absolute;inset:0';v.replaceWith(img);}
 function optimizeVideos(){
   document.querySelectorAll('video').forEach(v=>{
-    v.muted=true;v.setAttribute('playsinline','');v.setAttribute('disablepictureinpicture','');v.preload='none';
+    v.muted=true;v.setAttribute('playsinline','');v.setAttribute('disablepictureinpicture','');
+    // hero is the centrepiece — load it eagerly so the video appears fast (no long poster wait)
+    if(v.hasAttribute('data-eager')){v.preload='auto';v.load();} else {v.preload='none';}
   });
   // hero + why (standalone videos): load + play only while ~on-screen, pause off — one decode at a time
   document.querySelectorAll('video').forEach(v=>{
