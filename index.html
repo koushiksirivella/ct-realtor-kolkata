@@ -3,373 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CT Realtor — Land · Plots · Flats · Offices · Kolkata</title>
-<meta name="description" content="CT Realtor — three worlds, one address. Luxury homes, family residences & plots across Kolkata. 4.6-star, trusted locally." />
-
+<title>CT Realtor — Salt Lake Estate Agents · Kolkata Property since 2004</title>
+<meta name="description" content="CT Realtor — Salt Lake's trusted estate agency since 2004. Offices, flats, houses & plots across Sector-V, New Town, Rajarhat & Durgapur. 4.6★ on Google. Prioritizes People Over Property." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
-
-<style>
-/* ===========================================================
-   CT REALTOR — faithful replica of findrealestate.com theme
-   Light/white · ink #151717 · Instrument Sans + Lora serif
-   accents · layered-parallax hero · their section order.
-   CT Realtor content. No gold.
-   =========================================================== */
-:root{
-  --bg:#ffffff; --ink:#151717; --ink-80:rgba(21,23,23,.8); --muted:#8a8d8d;
-  --line:rgba(21,23,23,.12); --line-2:rgba(21,23,23,.2);
-  --band:#f4f3f1; --band-2:#ecebe8;
-  --sky-1:#bcd8ee; --sky-2:#e7f1f8; --sky-3:#fbfdfe;
-  --maxw:1290px; --pad:75px;
-  --ease:cubic-bezier(.22,1,.36,1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--ink);color:#fff}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-/* the findrealestate serif-italic emphasis (Lora inside Instrument Sans) */
-.em{font-family:"Lora",serif;font-style:italic;font-weight:500;letter-spacing:0}
-.mono{font-family:"Instrument Sans",sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:500;color:var(--muted)}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
-@media(max-width:760px){:root{--pad:24px}}
-
-/* ===== NAV (transparent over hero, dark text) ===== */
-header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .5s var(--ease),border-color .5s,backdrop-filter .5s;border-bottom:1px solid transparent}
-header.scrolled{background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px}
-.brand{display:flex;align-items:center;gap:11px;justify-self:start}
-.brand-mark{width:30px;height:30px;flex:none}
-.brand-word{display:flex;flex-direction:column;line-height:1}
-.brand-word b{font-weight:700;letter-spacing:.16em;font-size:14px}
-.brand-word small{font-size:8px;letter-spacing:.4em;color:var(--muted);margin-top:4px}
-.nav-mid{display:flex;align-items:center;gap:30px}
-.nav-mid a{font-size:13.5px;font-weight:500;color:var(--ink);opacity:.85;transition:opacity .3s}
-.nav-mid a:hover{opacity:1}
-.nav-cta{justify-self:end;display:flex;align-items:center;gap:14px}
-.btn-ink{background:var(--ink);color:#fff;font-weight:600;font-size:13px;padding:11px 22px;border-radius:100px;transition:transform .4s var(--ease),opacity .3s}
-.btn-ink:hover{transform:translateY(-2px);opacity:.92}
-.btn-ghost{border:1px solid var(--line-2);font-size:13px;font-weight:500;padding:10px 20px;border-radius:100px;transition:background .3s,border-color .3s}
-.btn-ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-@media(max-width:980px){.nav-mid{display:none}}
-@media(max-width:760px){.nav{grid-template-columns:1fr auto}.btn-ghost{display:none}}
-
-/* ===== HERO — sticky stage inside a tall scroll runway. Scroll-scrubbed
-   parallax: house rises, clouds part, smoke fades to white hand-off (ease:none). ===== */
-.hero-scroll{position:relative;height:340vh;margin-top:-72px;z-index:1}
-.hero-stage{position:sticky;top:0;height:100vh;height:100svh;min-height:620px;overflow:hidden;
-  background:linear-gradient(180deg,var(--sky-1) 0%,var(--sky-2) 46%,var(--sky-3) 76%,#fff 100%)}
-.hero-sky{position:absolute;inset:0;z-index:1}
-.cloud{position:absolute;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.96),rgba(255,255,255,0) 70%);filter:blur(2px);opacity:.9;z-index:1;will-change:transform}
-.c1{width:780px;height:300px;left:-180px;top:13%}
-.c2{width:640px;height:250px;right:-150px;top:8%}
-.c3{width:520px;height:210px;left:34%;top:27%;opacity:.66}
-.hero-word{position:absolute;z-index:2;left:0;right:0;top:23%;text-align:center;
-  font-weight:700;letter-spacing:-.025em;line-height:.84;color:var(--ink);
-  font-size:clamp(60px,15vw,220px);will-change:transform,opacity;pointer-events:none}
-.hero-word small{display:block;font-size:.092em;letter-spacing:.5em;font-weight:600;color:var(--ink-80);margin-top:.55em;text-transform:uppercase}
-/* soft glow behind the wordmark + house */
-.hero-glow{position:absolute;z-index:1;left:50%;top:14%;width:72vw;height:52vh;transform:translateX(-50%);pointer-events:none;
-  background:radial-gradient(50% 50% at 50% 50%,rgba(120,170,225,.20),transparent 70%);filter:blur(24px)}
-.hero-house-glow{position:absolute;z-index:2;left:50%;bottom:2%;width:min(1180px,92%);height:60%;transform:translateX(-50%);pointer-events:none;
-  border-radius:28px;filter:blur(46px);opacity:.45;
-  background:radial-gradient(62% 64% at 50% 35%,rgba(94,134,196,.4),rgba(217,180,120,.14) 60%,transparent 75%)}
-/* the house, now a clean bordered card that pops (no white wash) */
-.hero-house{position:absolute;z-index:3;left:50%;bottom:5%;width:min(1140px,92%);height:64%;perspective:1500px;will-change:transform}
-.hero-house-inner{position:relative;width:100%;height:100%;border-radius:20px;overflow:hidden;transform-style:preserve-3d;
-  border:1px solid rgba(255,255,255,.7);transition:transform .45s var(--ease),box-shadow .5s var(--ease);
-  box-shadow:0 30px 70px -34px rgba(21,23,23,.5),0 6px 22px -10px rgba(21,23,23,.34)}
-.hero-house img{width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:0;transition:opacity 1.2s var(--ease);filter:saturate(1.06) contrast(1.03)}
-.hero-house img.show{opacity:1}
-.hero-house video{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;background:var(--band-2);filter:saturate(1.08) contrast(1.02) brightness(1.12)}
-.why-media video{width:100%;height:100%;object-fit:cover;display:block}
-.worlds-stage .layer video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.hero-house-shine{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;mix-blend-mode:overlay;transition:opacity .5s var(--ease);
-  background:linear-gradient(115deg,transparent 36%,rgba(255,255,255,.55) 50%,transparent 64%)}
-.hero-house-tag{position:absolute;left:16px;bottom:14px;z-index:3;display:flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.6);border-radius:100px;
-  padding:8px 14px;font-size:11.5px;font-weight:600;color:var(--ink);box-shadow:0 8px 24px -12px rgba(21,23,23,.4)}
-.hero-house-tag .d{width:7px;height:7px;border-radius:50%;background:linear-gradient(120deg,#5e86c4,#9cc0f5)}
-/* very light hand-off only at the end — image stays crisp */
-.hero-smoke{position:absolute;z-index:6;left:0;right:0;bottom:0;height:18%;will-change:opacity;opacity:0;
-  background:linear-gradient(180deg,transparent,rgba(255,255,255,.8) 72%,#fff)}
-/* legibility scrim so white hero copy reads cleanly over the cinematic video */
-.hero-legibility{position:absolute;z-index:4;left:0;right:0;bottom:0;height:60%;pointer-events:none;
-  background:linear-gradient(180deg,transparent 38%,rgba(10,13,18,.18) 64%,rgba(10,13,18,.6) 100%)}
-.hero-overlay .hero-head{color:#fff;text-shadow:0 2px 40px rgba(8,10,14,.4)}
-.hero-overlay .hero-head .em{color:#f3ead9}
-.hero-overlay .hero-sub{color:rgba(255,255,255,.92)}
-.hero-overlay .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
-.hero-overlay .btn-ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
-.hero-stage .scroll-cue{color:rgba(255,255,255,.78)}
-.hero-stage .scroll-cue .ln{background:linear-gradient(rgba(255,255,255,.9),transparent)}
-.hero-stage .scroll-cue .ln::after{background:rgba(255,255,255,.9)}
-/* hero trust chips */
-.hero-chips{display:flex;gap:9px;margin-top:20px;flex-wrap:wrap}
-.chip{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:var(--ink-80);
-  background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:100px;padding:7px 13px;backdrop-filter:blur(6px)}
-.chip .d{width:6px;height:6px;border-radius:50%;background:linear-gradient(120deg,#5e86c4,#9cc0f5)}
-/* light button (on dark surfaces) */
-.btn-light{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-weight:600;font-size:13px;
-  padding:11px 20px;border-radius:100px;transition:transform .4s var(--ease),box-shadow .4s}
-.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 34px -14px rgba(0,0,0,.5)}
-.hero-overlay{position:absolute;z-index:5;left:0;right:0;bottom:0;padding-bottom:7vh;will-change:transform,opacity}
-.hero-head{font-weight:600;letter-spacing:-.02em;line-height:1.0;font-size:clamp(34px,5vw,72px);max-width:18ch}
-.hero-head .em{font-weight:500}
-.hero-sub{margin-top:18px;max-width:50ch;font-size:clamp(15px,1.4vw,18px);color:var(--ink-80)}
-.hero-row{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap}
-.hero-search{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line-2);border-radius:100px;padding:7px 7px 7px 20px;box-shadow:0 18px 40px -20px rgba(21,23,23,.3)}
-.hero-search input{border:none;outline:none;font-family:inherit;font-size:14.5px;width:min(360px,52vw);background:transparent;color:var(--ink)}
-.hero-search input::placeholder{color:var(--muted)}
-.hero-search button{background:var(--ink);color:#fff;border-radius:100px;padding:10px 20px;font-size:13px;font-weight:600;white-space:nowrap}
-.scroll-cue{position:absolute;z-index:6;bottom:18px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted)}
-.scroll-cue .ln{width:1px;height:38px;background:linear-gradient(var(--ink),transparent);position:relative;overflow:hidden}
-.scroll-cue .ln::after{content:"";position:absolute;top:-50%;left:0;width:100%;height:50%;background:var(--ink);animation:cue 2.2s var(--ease) infinite}
-@keyframes cue{to{top:120%}}
-
-/* ===== PROOF band (gradient numerals) ===== */
-.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--band)}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.proof-cell{padding:42px var(--pad);border-right:1px solid var(--line);position:relative}
-.proof-cell:last-child{border-right:none}
-.proof-cell .num{font-family:"Lora",serif;font-weight:600;font-size:clamp(36px,4vw,58px);line-height:1;
-  background:linear-gradient(120deg,var(--ink) 30%,#5e86c4);-webkit-background-clip:text;background-clip:text;color:transparent}
-.proof-cell .cap{margin-top:10px;font-size:12.5px;color:var(--muted);max-width:22ch}
-@media(max-width:760px){.proof-grid{grid-template-columns:1fr 1fr}.proof-cell:nth-child(2){border-right:none}}
-
-/* ===== generic ===== */
-section.block{padding:clamp(70px,9vw,130px) 0;position:relative}
-.band{background:var(--band)}
-.kicker{margin-bottom:20px}
-.h2{font-weight:600;letter-spacing:-.018em;line-height:1.04;font-size:clamp(30px,4vw,54px)}
-.lead{color:var(--ink-80);font-size:clamp(16px,1.5vw,20px);font-weight:400}
-.asym{display:grid;grid-template-columns:558px 1fr;gap:60px;align-items:start}
-@media(max-width:980px){.asym{grid-template-columns:1fr;gap:28px}}
-
-/* ===== WHY / sidekick + media ===== */
-.why-media{margin-top:50px;border-radius:16px;overflow:hidden;position:relative;height:clamp(320px,42vw,560px);background:var(--band-2)}
-.why-media img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s var(--ease);transform:scale(1.03)}
-.why-media img.show{opacity:1}
-.why-media .play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;transition:transform .5s var(--ease)}
-.why-media:hover .play{transform:scale(1.08)}
-.why-media .play svg{width:24px;height:24px;fill:var(--ink);margin-left:3px}
-
-/* ===== ARROWS section ===== */
-.arrows{text-align:center}
-.arrow-row{display:flex;justify-content:center;align-items:center;gap:14px;margin:46px 0 32px;flex-wrap:wrap}
-.chev{width:78px;height:100px;display:grid;place-items:center;opacity:.18;transition:opacity .6s var(--ease),transform .6s var(--ease)}
-.chev svg{width:100%;height:100%;stroke:var(--ink);fill:none}
-.arrows.in .chev{opacity:1}
-.arrows.in .chev:nth-child(1){transition-delay:.05s}
-.arrows.in .chev:nth-child(2){transition-delay:.16s;transform:scale(1.05)}
-.arrows.in .chev:nth-child(3){transition-delay:.27s}
-.arrows .sub{max-width:46ch;margin:0 auto;color:var(--ink-80);font-size:clamp(15px,1.5vw,19px)}
-
-/* ===== REWIRED numbered ===== */
-.rw-list{display:flex;flex-direction:column}
-.rw-item{display:flex;gap:36px;align-items:flex-start;padding:32px 0;border-top:1px solid var(--line)}
-.rw-item:last-child{border-bottom:1px solid var(--line)}
-.rw-item .rn{font-family:"Lora",serif;font-size:42px;font-weight:500;line-height:1;flex:none;width:58px;color:var(--ink)}
-.rw-item h3{font-weight:600;font-size:clamp(19px,2vw,26px)}
-.rw-item p{color:var(--ink-80);margin-top:8px;font-size:14.5px;max-width:62ch}
-
-/* ===== SPLIT (for sellers) ===== */
-.split{display:grid;grid-template-columns:528px 1fr;gap:30px;align-items:center}
-@media(max-width:980px){.split{grid-template-columns:1fr}}
-.split-imgs{position:relative;height:520px}
-.split-imgs .big{position:absolute;right:0;top:0;width:78%;height:100%;border-radius:14px;overflow:hidden;background:var(--band-2)}
-.split-imgs .small{position:absolute;left:0;bottom:-24px;width:46%;height:46%;border-radius:12px;overflow:hidden;z-index:2;background:var(--band-2);box-shadow:0 30px 60px -22px rgba(21,23,23,.35)}
-.split-imgs img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s var(--ease)}
-.split-imgs img.show{opacity:1}
-.split-copy .h2{margin:16px 0}
-.split-copy p{color:var(--ink-80);max-width:52ch}
-.split-copy .pts{margin-top:24px;display:flex;flex-direction:column;gap:13px}
-.split-copy .pts div{display:flex;gap:12px;align-items:center;font-size:14.5px}
-.split-copy .pts svg{flex:none;stroke:var(--ink)}
-
-/* ===== THREE WORLDS (Buy/Sell/Rent equivalent → switcher) ===== */
-.worlds-stage{position:relative;border-radius:16px 16px 0 0;overflow:hidden;min-height:540px;display:flex;align-items:flex-end;background:var(--band-2);margin-top:46px}
-.worlds-stage .layer{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease)}
-.worlds-stage .layer.active{opacity:1}
-.worlds-stage .layer img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.worlds-stage .layer .lgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,23,23,0) 30%,rgba(21,23,23,.35) 62%,rgba(21,23,23,.9))}
-.world-copy{position:relative;z-index:3;padding:clamp(32px,5vw,60px);max-width:700px;color:#fff}
-.world-copy .tag{margin-bottom:16px;color:rgba(255,255,255,.85)}
-.world-copy h3{font-weight:600;font-size:clamp(26px,3.2vw,44px);line-height:1.04}
-.world-copy h3 .em{font-weight:500}
-.world-copy p{margin-top:16px;opacity:.9;max-width:52ch}
-.world-feats{display:flex;gap:24px;margin-top:24px;flex-wrap:wrap}
-.world-feats span{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.85)}
-.world-feats span::before{content:"";width:5px;height:5px;border-radius:50%;background:#fff}
-.world-tabs{display:flex;border:1px solid var(--line);border-top:none;border-radius:0 0 16px 16px;overflow:hidden}
-.world-tabs button{flex:1;padding:22px 26px;text-align:left;border-right:1px solid var(--line);transition:background .4s;background:#fff}
-.world-tabs button:last-child{border-right:none}
-.world-tabs button.active{background:var(--band)}
-.world-tabs .wt-no{font-family:"Lora",serif;font-style:italic;font-size:16px;color:var(--muted)}
-.world-tabs .wt-name{display:block;margin-top:6px;font-size:16px;font-weight:600;color:var(--ink)}
-.world-tabs button:not(.active) .wt-name{color:var(--muted)}
-@media(max-width:760px){.world-tabs{flex-direction:column}.world-tabs button{border-right:none;border-bottom:1px solid var(--line)}}
-
-/* ===== INVENTORY ===== */
-.rail-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:38px}
-.rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
-.rail::-webkit-scrollbar{height:5px}.rail::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:9px}
-.card{flex:0 0 372px;scroll-snap-align:start;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;transition:transform .5s var(--ease),box-shadow .5s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(21,23,23,.3)}
-.card-media{position:relative;height:238px;overflow:hidden;background:var(--band-2)}
-.card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s var(--ease),transform 1.1s var(--ease)}
-.card-media img.show{opacity:1}
-.card:hover .card-media img{transform:scale(1.06)}
-.card-badge{position:absolute;top:13px;left:13px;background:rgba(255,255,255,.92);border:1px solid var(--line);padding:6px 12px;border-radius:100px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink)}
-.card-body{padding:20px 20px 22px;flex:1;display:flex;flex-direction:column}
-.card-body h4{font-weight:600;font-size:18px}
-.card-loc{color:var(--muted);font-size:12.5px;margin-top:6px;display:flex;align-items:center;gap:7px}
-.card-price{font-family:"Lora",serif;font-size:28px;font-weight:600;margin-top:16px}
-.card-specs{display:flex;gap:15px;margin-top:12px;flex-wrap:wrap}
-.card-specs span{font-size:12px;color:var(--muted)}
-.card-foot{margin-top:18px;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line)}
-.card-wa{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:#fff;background:#1faa54;padding:9px 15px;border-radius:100px;transition:transform .35s var(--ease)}
-.card-wa:hover{transform:translateY(-2px)}
-.card-view{font-size:12.5px;color:var(--ink);display:inline-flex;gap:7px;align-items:center;opacity:.7;transition:opacity .3s}
-.card-view:hover{opacity:1}
-
-/* ===== TESTIMONIALS ===== */
-.tg{display:grid;grid-template-columns:1fr 489px;gap:64px;align-items:center;margin-top:44px}
-@media(max-width:980px){.tg{grid-template-columns:1fr;gap:30px}}
-.t-media{height:460px;border-radius:16px;overflow:hidden;position:relative;background:var(--band-2)}
-.t-media img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s var(--ease)}
-.t-media img.show{opacity:1}
-.t-quote{min-height:230px;display:flex;flex-direction:column;justify-content:center}
-.t-quote .qm{font-family:"Lora",serif;font-size:74px;line-height:.6;color:var(--ink);height:38px}
-.t-quote blockquote{font-family:"Lora",serif;font-style:italic;font-weight:500;font-size:clamp(22px,2.4vw,32px);line-height:1.28;margin:14px 0 22px}
-.t-quote .who{font-size:13.5px;color:var(--muted)}
-.t-quote .who b{color:var(--ink);font-weight:600;display:block;font-family:"Instrument Sans";font-style:normal}
-.t-dots{display:flex;gap:4px;margin-top:28px}
-/* 20px hit area, 8px visible dot — thumb-friendly without changing the look */
-.t-dots button{width:20px;height:20px;border:6px solid transparent;border-radius:50%;background:var(--line-2);background-clip:padding-box;transition:background .3s,transform .3s}
-.t-dots button.active{background:var(--ink);transform:scale(1.3)}
-
-/* ===== STACKED WORDS ===== */
-.stack{padding:clamp(60px,8vw,120px) 0}
-.stack a{display:flex;align-items:baseline;gap:24px;font-weight:600;letter-spacing:-.02em;line-height:1.0;font-size:clamp(48px,11vw,150px);padding:6px 0;border-top:1px solid var(--line);transition:padding .5s var(--ease)}
-.stack a:last-child{border-bottom:1px solid var(--line)}
-.stack a:hover{padding-left:24px}
-.stack a .em{font-size:.2em;font-weight:500;color:var(--muted);letter-spacing:0}
-.stack a .ar{margin-left:auto;align-self:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;transition:background .4s,transform .4s var(--ease)}
-.stack a:hover .ar{background:var(--ink);transform:rotate(-45deg)}
-.stack a .ar svg{width:18px;height:18px;stroke:var(--ink);transition:stroke .4s}
-.stack a:hover .ar svg{stroke:#fff}
-
-/* ===== SERVICES rows ===== */
-.srv-row{position:relative;border-top:1px solid var(--line);overflow:hidden;display:block;width:100%;text-align:left}
-.srv-row:last-child{border-bottom:1px solid var(--line)}
-.srv-bg{position:absolute;inset:0;z-index:0;opacity:0;transition:opacity .7s var(--ease)}
-.srv-bg img{width:100%;height:100%;object-fit:cover}
-.srv-bg .sgrad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,23,23,.78),rgba(21,23,23,.3))}
-.srv-row:hover .srv-bg{opacity:1}
-.srv-row:hover .srv-no,.srv-row:hover .srv-main h3{color:#fff}
-.srv-row:hover .srv-main p{color:rgba(255,255,255,.85)}
-.srv-in{position:relative;z-index:2;display:grid;grid-template-columns:60px 1fr auto;gap:34px;align-items:center;padding:40px var(--pad);transition:padding .5s var(--ease)}
-.srv-row:hover .srv-in{padding-left:calc(var(--pad) + 16px)}
-.srv-no{font-family:"Lora",serif;font-style:italic;font-size:18px;color:var(--muted);transition:color .5s}
-.srv-main h3{font-weight:600;font-size:clamp(22px,2.6vw,34px);transition:color .5s}
-.srv-main p{color:var(--ink-80);font-size:14px;max-width:60ch;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .5s,margin .5s,color .5s}
-.srv-row:hover .srv-main p{max-height:90px;opacity:1;margin-top:10px}
-.srv-arrow{width:54px;height:54px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;transition:background .5s,border-color .5s,transform .5s var(--ease);flex:none}
-.srv-row:hover .srv-arrow{background:#fff;border-color:#fff;transform:rotate(-45deg)}
-.srv-arrow svg{width:20px;height:20px;stroke:var(--ink);transition:stroke .5s}
-.srv-in{} .srv-row .srv-arrow svg{stroke:var(--ink)}
-.srv-row:not(:hover) .srv-arrow svg{stroke:var(--ink)}
-@media(max-width:680px){.srv-in{grid-template-columns:auto 1fr;gap:16px}.srv-arrow{grid-column:2;justify-self:end}}
-
-/* ===== LEAD ===== */
-.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-@media(max-width:980px){.lead-grid{grid-template-columns:1fr;gap:38px}}
-.wa-big{display:inline-flex;align-items:center;gap:14px;background:#1faa54;color:#fff;font-weight:600;font-size:16px;padding:17px 28px;border-radius:100px;margin-top:6px;transition:transform .4s var(--ease),box-shadow .4s}
-.wa-big:hover{transform:translateY(-3px);box-shadow:0 16px 40px -14px rgba(31,170,84,.5)}
-.lead-meta{margin-top:32px;display:flex;flex-direction:column;gap:15px}
-.lead-meta div{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-80)}
-.lead-meta b{color:var(--ink);font-weight:600;display:block}
-.form{background:var(--band);border:1px solid var(--line);border-radius:16px;padding:clamp(26px,3vw,40px)}
-.field{margin-bottom:18px}
-.field label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:8px}
-.field input,.field select{width:100%;background:#fff;border:1px solid var(--line-2);border-radius:10px;padding:13px 15px;color:var(--ink);font-family:inherit;font-size:15px;transition:border-color .3s}
-.field input::placeholder{color:var(--muted)}
-.field input:focus,.field select:focus{outline:none;border-color:var(--ink)}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-@media(max-width:520px){.field-row{grid-template-columns:1fr}}
-.form .btn-ink{width:100%;justify-content:center;display:flex;padding:15px;font-size:15px;margin-top:4px}
-.form-note{font-size:11.5px;color:var(--muted);margin-top:14px;text-align:center}
-.form-ok{display:none;text-align:center;padding:26px 0}
-.form-ok.show{display:block}
-.form-ok .ck{width:52px;height:52px;border-radius:50%;background:var(--band-2);display:grid;place-items:center;margin:0 auto 14px}
-
-/* ===== FOOTER CTA + footer ===== */
-.foot-cta{text-align:center;padding:clamp(70px,11vw,140px) 0;position:relative;
-  background:radial-gradient(70% 120% at 50% 0%,rgba(120,170,225,.14),transparent 62%)}
-.foot-cta h2{font-weight:600;letter-spacing:-.02em;line-height:1;font-size:clamp(40px,8vw,108px);max-width:16ch;margin:0 auto}
-.foot-cta h2 .em{font-weight:500}
-footer{border-top:1px solid var(--line);background:var(--band)}
-.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding:68px 0 28px}
-@media(max-width:760px){.foot{grid-template-columns:1fr;gap:28px}}
-.foot h4{font-family:"Lora",serif;font-size:30px;font-weight:600}
-.foot p{color:var(--ink-80);font-size:13.5px;margin-top:13px;max-width:34ch}
-.foot-col .mono{display:block;margin-bottom:14px}
-.foot-col a{display:block;color:var(--ink-80);font-size:14px;padding:5px 0;transition:color .3s}
-.foot-col a:hover{color:var(--ink)}
-.foot-bot{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
-.badge-concept{font-size:10px;letter-spacing:.12em;border:1px solid var(--line-2);padding:6px 12px;border-radius:100px;color:var(--ink-80);text-transform:uppercase;font-weight:600}
-
-.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.rv.in{opacity:1;transform:none}
-.concept-flag{position:fixed;bottom:18px;right:18px;z-index:80;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink-80)}
-@media(max-width:560px){.concept-flag{display:none}}
-
-/* ===== mobile overrides — keep last so they win the cascade ===== */
-@media(max-width:760px){
-  /* 16px floor stops iOS Safari auto-zoom on focus */
-  .hero-search input,.field input,.field select{font-size:16px}
-  .chip{backdrop-filter:none;background:rgba(255,255,255,.88)}
-  .split-imgs{height:min(420px,118vw)}
-  .card{flex:0 0 min(372px,84vw)}
-  /* overlay copy rides higher on phones — extend the scrim so the headline stays legible */
-  .hero-legibility{height:100%;background:linear-gradient(180deg,transparent 30%,rgba(10,13,18,.38) 60%,rgba(10,13,18,.66) 100%)}
-  .hero-overlay .hero-head{text-shadow:0 2px 18px rgba(8,10,14,.55)}
-  .hero-house-tag{display:none}
-}
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
-<body data-world="luxury">
+<body data-page="home" data-world="commercial">
 
-<!-- ===== NAV ===== -->
-<header id="hdr">
-  <div class="container nav">
-    <a class="brand" href="#top" aria-label="CT Realtor">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
-        <path d="M20 4l1.9 4.1L26 9l-2.7 3.4L24 17l-4-1.5L16 17l.7-4.6L14 9l4.1-.7L20 4z" fill="#151717"/>
-        <path d="M14 21c-2.4 0-4.2 2-4.2 5.4V34h4.7v-6.6c0-1 .5-1.6 1.3-1.6.7 0 1.2.6 1.2 1.6V34H22v-7.7c0-2.9-1.7-4.8-3.9-4.8-1.4 0-2.5.7-3.1 1.8C14.6 21.5 14.4 21 14 21z" fill="#151717"/>
-        <path d="M27 21c-2.3 0-3.9 1.9-3.9 4.8V34H28v-6.6c0-1 .5-1.6 1.2-1.6.8 0 1.3.6 1.3 1.6V34H35v-7.6c0-3.4-1.8-5.4-4.2-5.4z" fill="#8a8d8d"/>
-      </svg>
-      <span class="brand-word"><b>CT REALTOR</b><small>LAND · PLOTS · FLATS · OFFICES</small></span>
-    </a>
-    <nav class="nav-mid">
-      <a href="#inventory">Search</a>
-      <a href="#worlds">Worlds</a>
-      <a href="#sellers">Sell</a>
-      <a href="#worlds">Plots</a>
-      <a href="#why">About</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn-ghost" href="#lead">Sign In</a>
-      <a class="btn-ink" href="#lead">Enquire</a>
-    </div>
-  </div>
-</header>
+<header id="site-header"></header>
 
-<!-- ===== HERO (layered parallax) ===== -->
+<!-- ===== HERO ===== -->
 <div class="hero-scroll" id="top">
   <div class="hero-stage">
     <div class="hero-sky"></div>
@@ -377,16 +22,16 @@ footer{border-top:1px solid var(--line);background:var(--band)}
     <div class="cloud c1"></div>
     <div class="cloud c2"></div>
     <div class="cloud c3"></div>
-    <div class="hero-word">CT REALTOR<small>LAND · PLOTS · FLATS · OFFICES · Kolkata</small></div>
+    <div class="hero-word">CT REALTOR<small>SALT LAKE · SECTOR-V · NEW TOWN · KOLKATA</small></div>
     <div class="hero-house-glow"></div>
     <div class="hero-house">
       <div class="hero-house-inner">
-        <video class="hero-house-vid" autoplay muted loop playsinline preload="auto"
-          poster="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1800&auto=format&fit=crop">
+        <video class="hero-house-vid" muted loop playsinline preload="none"
+          poster="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1800&auto=format&fit=crop">
           <source src="assests/Cinematic_real_estate_establis.mp4" type="video/mp4">
         </video>
         <div class="hero-house-shine"></div>
-        <div class="hero-house-tag"><span class="d"></span>Kolkata Premium Bungalow · ₹3.4 Cr</div>
+        <div class="hero-house-tag"><span class="d"></span>Sector-V Office Space · ₹95 L</div>
       </div>
     </div>
     <div class="hero-smoke"></div>
@@ -394,21 +39,20 @@ footer{border-top:1px solid var(--line);background:var(--band)}
 
     <div class="hero-overlay">
       <div class="container">
-        <h1 class="hero-head">Find what <span class="em">moves</span> you<br/>across Kolkata.</h1>
-        <p class="hero-sub">Three worlds, one address — luxury homes, family residences and plots across Kolkata. 4.6★ on Google, trusted locally.</p>
+        <h1 class="hero-head">Salt Lake's address for <span class="em">offices, homes</span> &amp; land.</h1>
+        <p class="hero-sub">CT Realtor — one trusted name since 2004 for commercial space, flats, houses and plots across Sector-V, Salt Lake &amp; New Town. 4.6★ on Google. <em>People over property.</em></p>
         <div class="hero-row">
           <form class="hero-search" id="heroSearch">
-            <input type="text" placeholder="Search Kolkata, 3 BHK, plot…" />
+            <input type="text" placeholder="Sector-V office, 3 BHK, HIDCO plot…" aria-label="Search property" />
             <button type="submit">Search</button>
           </form>
-          <a class="btn-ink" href="#worlds">Explore the three worlds</a>
-          <a class="btn-ghost" href="#inventory">View live inventory</a>
+          <a class="btn-gold" href="properties.html">Browse properties</a>
         </div>
         <div class="hero-chips">
           <span class="chip"><span class="d"></span>4.6★ Google · 69 reviews</span>
-          <span class="chip"><span class="d"></span>RERA-aligned</span>
-          <span class="chip"><span class="d"></span>Trusted across Kolkata</span>
-          <span class="chip"><span class="d"></span>&lt; 2 hr first response</span>
+          <span class="chip"><span class="d"></span>Estate agents since 2004</span>
+          <span class="chip"><span class="d"></span>Salt Lake · Sector-V · New Town</span>
+          <span class="chip"><span class="d"></span>Reply usually &lt; 1 hr</span>
         </div>
       </div>
     </div>
@@ -421,25 +65,35 @@ footer{border-top:1px solid var(--line);background:var(--band)}
   <div class="proof-grid">
     <div class="proof-cell rv"><div class="num">4.6★</div><div class="cap">Google rating across Kolkata</div></div>
     <div class="proof-cell rv"><div class="num">69</div><div class="cap">Verified Google reviews</div></div>
-    <div class="proof-cell rv"><div class="num">10+ yrs</div><div class="cap">Serving Kolkata homebuyers</div></div>
-    <div class="proof-cell rv"><div class="num">&lt; 2 hr</div><div class="cap">Average enquiry → site-visit turnaround</div></div>
+    <div class="proof-cell rv"><div class="num">20+ yrs</div><div class="cap">Serving Salt Lake since 2004</div></div>
+    <div class="proof-cell rv"><div class="num">&lt; 1 hr</div><div class="cap">Typical enquiry reply time</div></div>
   </div>
 </div>
 
-<!-- ===== WHY / sidekick ===== -->
-<section class="block" id="why">
+<!-- ===== TRUST strip (real corporate clients) ===== -->
+<div class="trust">
+  <div class="container trust-in">
+    <span class="trust-lab">Trusted by teams at</span>
+    <div class="trust-logos">
+      <span>DLF</span><span>DHL</span><span>QSpiders</span><span>Cosmos&nbsp;Maya</span><span>Delta&nbsp;Plus</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHY ===== -->
+<section class="block tint" id="why">
   <div class="container">
     <div class="asym">
-      <div class="rv">
-        <div class="kicker mono">[ Your sidekick across Kolkata ]</div>
-        <h2 class="h2">One name.<br/><span class="em">Three worlds.</span><br/>One address.</h2>
+      <div class="rv fromL">
+        <div class="kicker mono">[ Your sidekick across Salt Lake ]</div>
+        <h2 class="h2">One name.<br/><span class="em shine">Three worlds.</span><br/>One address.</h2>
       </div>
-      <div class="rv">
-        <p class="lead">A luxury buyer, a young family and a plot investor don't want the same site — they want the same <span class="em">trust</span>. CT Realtor carries all three in one place, and the room changes the moment you choose your world: premium homes in the best addresses, move-in-ready apartments in growing suburbs, and approved plots on the city’s growth corridors. <span class="em">All under the CT Realtor name, all one tap away.</span></p>
+      <div class="rv fromR">
+        <p class="lead">A corporate looking for office space, a family after a flat and an investor eyeing a HIDCO plot don't want the same site — they want the same <span class="em">trust</span>. CT Realtor has carried all three under one roof since 2004: commercial space in Sector-V, homes across Salt Lake &amp; New Town, and clear-title plots on the city's growth corridors. <span class="em">One name, one tap away.</span></p>
       </div>
     </div>
     <div class="why-media rv">
-      <video autoplay muted loop playsinline preload="metadata"
+      <video muted loop playsinline preload="none"
         poster="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1800&auto=format&fit=crop">
         <source src="assests/Slow_cinematic_forward_dolly_t.mp4" type="video/mp4">
       </video>
@@ -450,27 +104,27 @@ footer{border-top:1px solid var(--line);background:var(--band)}
 <!-- ===== ARROWS ===== -->
 <section class="block band arrows" id="arrowsSec">
   <div class="container">
-    <h2 class="h2 rv" style="max-width:20ch;margin:0 auto">There's just <span class="em">one bridge</span> between your name and their decision.</h2>
+    <h2 class="h2 rv" style="max-width:20ch;margin:0 auto">There's just <span class="em">one bridge</span> between your search and the right keys.</h2>
     <div class="arrow-row">
       <div class="chev"><svg viewBox="0 0 24 36" stroke-width="2"><path d="M4 4l14 14L4 32"/></svg></div>
       <div class="chev"><svg viewBox="0 0 24 36" stroke-width="2"><path d="M4 4l14 14L4 32"/></svg></div>
       <div class="chev"><svg viewBox="0 0 24 36" stroke-width="2"><path d="M4 4l14 14L4 32"/></svg></div>
     </div>
-    <p class="sub rv">Reputation makes them search. The experience decides whether they stay, feel, and reach you — and that's exactly what CT Realtor is built to be.</p>
+    <p class="sub rv">Reputation makes them call. The experience decides whether they stay, trust and sign — and that's exactly what twenty years of CT Realtor is built to be.</p>
   </div>
 </section>
 
-<!-- ===== REWIRED numbered ===== -->
+<!-- ===== REWIRED ===== -->
 <section class="block">
   <div class="container asym">
-    <div class="rv">
-      <div class="kicker mono">[ Kolkata realty, rewired ]</div>
-      <h2 class="h2">The old site captured <span class="em">zero</span>.<br/>This one captures <span class="em">everyone</span>.</h2>
+    <div class="rv fromL">
+      <div class="kicker mono">[ Salt Lake realty, done right ]</div>
+      <h2 class="h2">A name corporates and families <span class="em shine">both</span> trust.</h2>
     </div>
-    <div class="rw-list rv">
-      <div class="rw-item"><div class="rn">01</div><div><h3>Off-market, first</h3><p>The premium homes that never hit a public portal reach the right buyer privately — through CT Realtor, not against it.</p></div></div>
-      <div class="rw-item"><div class="rn">02</div><div><h3>Plots &amp; offices, verified end-to-end</h3><p>Clear-title verification, KMDA &amp; HIDCO approvals, paperwork and registration — buy land, plots or office space in Kolkata without the guesswork.</p></div></div>
-      <div class="rw-item"><div class="rn">03</div><div><h3>One tap to a human</h3><p>Every property, every section — one WhatsApp tap to the CT Realtor team. A reply within the hour, not the week.</p></div></div>
+    <div class="rw-list rv fromR">
+      <div class="rw-item"><div class="rn">01</div><div><h3>Commercial that means business</h3><p>Office, showroom and shop space across Sector-V and Salt Lake — the corporate brokerage names like DLF, DHL and QSpiders already rely on.</p></div></div>
+      <div class="rw-item"><div class="rn">02</div><div><h3>Plots &amp; homes, verified end-to-end</h3><p>HIDCO-allotted plots, clear-title verification, paperwork and registration — buy land, a flat or a house in Kolkata without the guesswork.</p></div></div>
+      <div class="rw-item"><div class="rn">03</div><div><h3>One tap to a human</h3><p>Every property, one WhatsApp tap to the CT Realtor team. A reply within the hour, not the week.</p></div></div>
     </div>
   </div>
 </section>
@@ -478,47 +132,52 @@ footer{border-top:1px solid var(--line);background:var(--band)}
 <!-- ===== SELLERS split ===== -->
 <section class="block" id="sellers">
   <div class="container split">
-    <div class="split-imgs rv">
-      <div class="big"><img alt="" data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop"/></div>
+    <div class="split-imgs rv fromL">
+      <div class="big"><img alt="Selling property with CT Realtor" data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop"/></div>
       <div class="small"><img alt="" data-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=900&auto=format&fit=crop"/></div>
     </div>
-    <div class="split-copy rv">
-      <div class="kicker mono">[ For sellers ]</div>
+    <div class="split-copy rv fromR">
+      <div class="kicker mono">[ For sellers &amp; landlords ]</div>
       <h2 class="h2">Your property,<br/>in front of the <span class="em">right</span> buyer.</h2>
-      <p>Local premium buyers, outstation investors and serious families — positioned, priced and marketed with CT Realtor's 4.6★ reputation behind every listing.</p>
+      <p>Corporate tenants, local families and serious investors — positioned, priced and marketed with CT Realtor's 4.6★ reputation behind every listing.</p>
       <div class="pts">
-        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg>Priced on real Kolkata corridor data</div>
-        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg>Marketed to local + outstation buyer pools</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg>Priced on real Salt Lake &amp; Sector-V data</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg>Marketed to corporate + resident buyer pools</div>
         <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg>One point of contact, start to close</div>
       </div>
+      <a class="btn-ink" style="margin-top:28px" href="services.html">How we sell &amp; lease <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ===== THREE WORLDS showcase ===== -->
-<section class="block band" id="worlds">
+<!-- ===== THREE WORLDS ===== -->
+<section class="block band accent-top" id="worlds">
+  <div class="floatwrap">
+    <span class="fdot" style="left:8%;top:18%"></span><span class="fring" style="left:90%;top:24%"></span>
+    <span class="fdot" style="left:78%;top:70%;animation-delay:1.5s"></span><span class="fring" style="left:14%;top:78%;animation-delay:.8s"></span>
+  </div>
   <div class="container">
     <div class="rail-head">
-      <div class="rv"><div class="kicker mono">[ Three Worlds ]</div><h2 class="h2">Pick a world.<br/>Watch the room <span class="em">change</span>.</h2></div>
-      <p class="lead rv" style="max-width:34ch">One site, three audiences — the mood, the copy and the homes that surface all shift with your choice.</p>
+      <div class="rv fromL"><div class="kicker mono">[ Three Worlds ]</div><h2 class="h2">Pick a world.<br/>Watch the room <span class="em shine">change</span>.</h2></div>
+      <p class="lead rv fromR" style="max-width:34ch">One agency, three audiences — the mood, the copy and the property that surfaces all shift with your choice.</p>
     </div>
     <div class="worlds-stage rv" id="stage">
-      <div class="layer active" data-world="luxury"><video muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop"><source src="assests/Cinematic_aerial_drone_shot_s.mp4" type="video/mp4"></video><div class="lgrad"></div></div>
-      <div class="layer" data-world="family"><video muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop"><source src="assests/Slow_aerial_drone_push_over_a.mp4" type="video/mp4"></video><div class="lgrad"></div></div>
-      <div class="layer" data-world="nri"><video muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1600&auto=format&fit=crop"><source src="assests/Slow_cinematic_forward_dolly_t.mp4" type="video/mp4"></video><div class="lgrad"></div></div>
+      <div class="layer active" data-world="commercial"><video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop"><source src="assests/Cinematic_aerial_drone_shot_s.mp4" type="video/mp4"></video><div class="lgrad"></div></div>
+      <div class="layer" data-world="residential"><video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop"><source src="assests/Slow_aerial_drone_push_over_a.mp4" type="video/mp4"></video><div class="lgrad"></div></div>
+      <div class="layer" data-world="land"><video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop"><source src="assests/Slow_cinematic_forward_dolly_t.mp4" type="video/mp4"></video><div class="lgrad"></div></div>
       <div class="world-copy">
-        <div class="tag mono" id="wTag">World 01 · Luxury Homes</div>
-        <h3 id="wTitle">Premium bungalows &amp; villas in <span class="em">Kolkata's most-wanted addresses.</span></h3>
-        <p id="wText">Independent houses and luxury apartments across Kolkata's most sought-after residential belts.</p>
-        <div class="world-feats" id="wFeats"><span>Prime localities</span><span>Independent bungalows</span><span>Private viewings</span></div>
-        <a class="btn-light" id="wBtn" href="#inventory" style="margin-top:28px">Explore Luxury homes
+        <div class="tag mono" id="wTag">World 01 · Commercial &amp; Office</div>
+        <h3 id="wTitle">Office, showroom &amp; commercial space in <span class="em">Sector-V &amp; Salt Lake.</span></h3>
+        <p id="wText">Furnished and bare-shell offices, showrooms and shops across Sector-V, Salt Lake and New Town.</p>
+        <div class="world-feats" id="wFeats"><span>Sector-V IT corridor</span><span>Furnished &amp; bare-shell</span><span>Corporate-grade</span></div>
+        <a class="btn-light" id="wBtn" href="properties.html" style="margin-top:28px">Explore commercial space
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
     <div class="world-tabs" id="worldTabs">
-      <button class="active" data-world="luxury"><span class="wt-no">01</span><span class="wt-name">Luxury</span></button>
-      <button data-world="family"><span class="wt-no">02</span><span class="wt-name">Family</span></button>
-      <button data-world="nri"><span class="wt-no">03</span><span class="wt-name">Plots &amp; Land</span></button>
+      <button class="active" data-world="commercial"><span class="wt-no">01</span><span class="wt-name">Commercial</span></button>
+      <button data-world="residential"><span class="wt-no">02</span><span class="wt-name">Residential</span></button>
+      <button data-world="land"><span class="wt-no">03</span><span class="wt-name">Plots &amp; Land</span></button>
     </div>
   </div>
 </section>
@@ -527,23 +186,24 @@ footer{border-top:1px solid var(--line);background:var(--band)}
 <section class="block" id="inventory">
   <div class="container">
     <div class="rail-head">
-      <div class="rv"><div class="kicker mono">[ Live Inventory ]</div><h2 class="h2">Homes moving <span class="em">right now</span> across Kolkata.</h2></div>
+      <div class="rv"><div class="kicker mono">[ Featured Inventory ]</div><h2 class="h2">Moving <span class="em">right now</span> across Kolkata.</h2></div>
       <p class="lead rv" style="max-width:30ch">Drag to explore. Every card is one tap to WhatsApp — straight to the CT Realtor team.</p>
     </div>
   </div>
   <div class="container" style="max-width:none;padding:0"><div class="rail container" id="rail"></div></div>
+  <div class="container" style="margin-top:30px"><a class="btn-ghost rv" href="properties.html">View all properties <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
 <section class="block band">
   <div class="container">
-    <div class="rv"><div class="kicker mono">[ Don't take it from us ]</div><h2 class="h2">The CT Realtor name, <span class="em">in their words</span>.</h2></div>
+    <div class="rv"><div class="kicker mono">[ Don't take it from us ]</div><h2 class="h2">Twenty years, <span class="em">in their words</span>.</h2></div>
     <div class="tg">
-      <div class="t-media rv"><img alt="" data-src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1400&auto=format&fit=crop"/></div>
-      <div class="t-quote rv">
+      <div class="t-media rv fromL"><img alt="Happy CT Realtor client" data-src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1400&auto=format&fit=crop"/></div>
+      <div class="t-quote rv fromR">
         <div class="qm">&ldquo;</div>
-        <blockquote id="tQuote">They found us a bungalow in central Kolkata before it ever hit a portal. One WhatsApp, a site visit two days later, keys in six weeks.</blockquote>
-        <div class="who" id="tWho"><b>Rohan &amp; Meghna</b>Bungalow buyers · Kolkata</div>
+        <blockquote id="tQuote">We needed corporate office space in Sector-V fast. CT Realtor understood the brief, shortlisted three floors, and we'd signed within the week.</blockquote>
+        <div class="who" id="tWho"><b>Corporate tenant</b>Office · Sector-V, Salt Lake</div>
         <div class="t-dots" id="tDots"></div>
       </div>
     </div>
@@ -555,9 +215,9 @@ footer{border-top:1px solid var(--line);background:var(--band)}
   <div class="container">
     <div class="rv"><div class="kicker mono">[ What CT Realtor does ]</div></div>
     <div class="stack rv">
-      <a href="#worlds">Buy<span class="em">flats · plots · office space</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a href="#sellers">Sell<span class="em">priced local, marketed wide</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a href="#worlds">Invest<span class="em">KMDA plots, clear title</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a href="properties.html">Buy<span class="em">offices · flats · plots</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a href="services.html">Sell<span class="em">priced local, marketed wide</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a href="services.html">Lease<span class="em">Sector-V office &amp; retail</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
   </div>
 </section>
@@ -571,35 +231,39 @@ footer{border-top:1px solid var(--line);background:var(--band)}
 </section>
 
 <!-- ===== LEAD ===== -->
-<section class="block band" id="lead">
+<section class="block dark-band" id="lead">
+  <div class="floatwrap">
+    <span class="fdot" style="left:6%;top:22%"></span><span class="fring" style="left:88%;top:30%;animation-delay:1s"></span>
+    <span class="fdot" style="left:72%;top:74%;animation-delay:2s"></span><span class="fdot" style="left:40%;top:12%;animation-delay:.6s"></span>
+  </div>
   <div class="container lead-grid">
-    <div class="rv">
+    <div class="rv fromL">
       <div class="kicker mono">[ Start the conversation ]</div>
-      <h2 class="h2">Tell us the home.<br/>We'll bring the <span class="em">shortlist</span>.</h2>
+      <h2 class="h2">Tell us the space.<br/>We'll bring the <span class="em">shortlist</span>.</h2>
       <p class="lead" style="margin:16px 0 28px">One message, and a real person from CT Realtor replies — usually within the hour.</p>
-      <a class="wa-big" href="https://wa.me/919734236920?text=Hi%20CT%20Realtor%2C%20I%27m%20looking%20for%20a%20property%20in%20Kolkata" target="_blank" rel="noopener">
+      <a class="wa-big" href="https://wa.me/919734236920?text=Hi%20CT%20Realtor%2C%20I%27m%20looking%20for%20a%20property%20in%20Kolkata." target="_blank" rel="noopener">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5L8.8 7c-.2-.4-.3-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c2.6 1 2.6.7 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
         WhatsApp +91 97342 36920</a>
       <div class="lead-meta">
-        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Kolkata, West Bengal</b>Homes, plots &amp; rentals across the city</span></div>
-        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>&lt; 2 hour first response</b>Real human, every enquiry</span></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Sector-5, Salt Lake City, Kolkata 700091</b>Commercial, residential &amp; plots across the city</span></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Reply usually within the hour</b>Real human, every enquiry</span></div>
       </div>
     </div>
-    <div class="form rv">
-      <form id="leadForm">
+    <div class="form rv fromR">
+      <form data-lead>
         <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" placeholder="e.g. Ananya Rao" required/></div>
         <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" placeholder="+91 ..." required/></div>
         <div class="field-row">
-          <div class="field"><label for="f-look">Looking for</label><select id="f-look" name="looking"><option>Luxury home / bungalow</option><option>Family apartment (2–3 BHK)</option><option>Plot / land</option><option>Selling a property</option></select></div>
-          <div class="field"><label for="f-budget">Budget</label><select id="f-budget" name="budget"><option>Under ₹1 Cr</option><option>₹1 – 2 Cr</option><option>₹2 – 4 Cr</option><option>₹4 Cr +</option></select></div>
+          <div class="field"><label for="f-look">Looking for</label><select id="f-look" name="looking"><option>Office / commercial space</option><option>Flat (2–3 BHK)</option><option>Independent house / bungalow</option><option>Plot / land</option><option>Selling or renting out</option></select></div>
+          <div class="field"><label for="f-budget">Budget</label><select id="f-budget" name="budget"><option>Under ₹50 L</option><option>₹50 L – 1 Cr</option><option>₹1 – 3 Cr</option><option>₹3 Cr +</option></select></div>
         </div>
-        <button type="submit" class="btn-ink">Send to CT Realtor</button>
+        <button type="submit" class="btn-gold">Send to CT Realtor</button>
         <div class="form-note">Or one-tap WhatsApp — we reply within the hour.</div>
       </form>
-      <div class="form-ok" id="formOk">
-        <div class="ck"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
-        <h3 style="font-family:'Lora',serif;font-size:26px;font-weight:600">Enquiry ready.</h3>
-        <p style="color:var(--ink-80);font-size:14px;margin-top:8px">In the live site this routes to the CT Realtor team instantly. Opening WhatsApp to finish…</p>
+      <div class="form-ok">
+        <div class="ck"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1faa54" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+        <h3 style="font-family:'Lora',serif;font-size:26px;font-weight:600;color:#fff">Enquiry ready.</h3>
+        <p style="color:rgba(255,255,255,.8);font-size:14px;margin-top:8px">In the live site this routes to the CT Realtor team instantly. Opening WhatsApp to finish…</p>
       </div>
     </div>
   </div>
@@ -607,191 +271,22 @@ footer{border-top:1px solid var(--line);background:var(--band)}
 
 <!-- ===== FOOTER CTA ===== -->
 <section class="foot-cta">
+  <div class="floatwrap">
+    <span class="fring" style="left:10%;top:26%"></span><span class="fdot" style="left:84%;top:30%;animation-delay:1.2s"></span>
+    <span class="fdot" style="left:22%;top:70%;animation-delay:.5s"></span><span class="fring" style="left:80%;top:68%;animation-delay:1.8s"></span>
+  </div>
   <div class="container">
-    <div class="kicker mono rv" style="text-align:center;margin-bottom:22px">[ One address ]</div>
-    <h2 class="rv">You find the life.<br/>We'll find the <span class="em">home</span>.</h2>
-    <div class="rv" style="margin-top:36px"><a class="btn-ink" href="#lead" style="font-size:15px;padding:15px 30px">Start with CT Realtor</a></div>
+    <div class="kicker mono rv" style="text-align:center;margin-bottom:22px;color:rgba(255,255,255,.55)">[ People over property ]</div>
+    <h2 class="rv zoom">You find the life.<br/>We'll find the <span class="em shine">space</span>.</h2>
+    <div class="rv" style="margin-top:36px"><a class="btn-gold" href="contact.html" style="font-size:15px;padding:15px 30px">Start with CT Realtor</a></div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div><h4>CT Realtor</h4><p>Land · Plots · Flats · Offices — luxury, family &amp; plots across Kolkata. A trusted local name — 4.6★ across 69 Google reviews.</p></div>
-      <div class="foot-col"><span class="mono">Worlds</span><a href="#worlds">Luxury homes</a><a href="#worlds">Family residences</a><a href="#worlds">Plots &amp; land</a><a href="#inventory">Live inventory</a></div>
-      <div class="foot-col"><span class="mono">Reach</span><a href="https://wa.me/919734236920" target="_blank" rel="noopener">WhatsApp +91 97342 36920</a><a href="https://www.ctrealtor.co.in/" target="_blank" rel="noopener">ctrealtor.co.in</a><a href="#lead">Book a private viewing</a></div>
-    </div>
-    <div class="foot-bot">
-      <span>© 2026 CT Realtor · Kolkata, West Bengal</span>
-      <span>Concept &amp; build by Dynasty Studio</span>
-      <span class="badge-concept">Mockup · illustrative data</span>
-    </div>
-  </div>
-</footer>
-
+<footer id="site-footer"></footer>
 <div class="concept-flag">CT Realtor · concept mockup</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script>
-/* ===== DATA ===== */
-const WORLDS={
-  luxury:{wTag:"World 01 · Luxury Homes",btn:"Explore Luxury homes",wTitle:'Premium bungalows &amp; villas in <span class="em">Alipore, Ballygunge &amp; Park Street.</span>',wText:"Independent houses and luxury apartments across South Kolkata's most sought-after addresses — Alipore, Ballygunge, Lansdowne and the Park Street belt.",feats:["Alipore · Ballygunge","Independent bungalows","Private viewings"]},
-  family:{wTag:"World 02 · Family Homes",btn:"Explore Family homes",wTitle:'2–3 BHK homes in communities <span class="em">built for the long stay.</span>',wText:"Schools, markets, connectivity and move-in-ready homes across Salt Lake, New Town and Behala — matched to how your family actually lives.",feats:["Salt Lake · New Town","Gated societies","Move-in ready"]},
-  nri:{wTag:"World 03 · Plots, Land &amp; Offices",btn:"Explore plots &amp; offices",wTitle:'Plots, land &amp; office space on Kolkata\'s <span class="em">fastest-growing corridors.</span>',wText:"KMDA-approved plots, high-yield land and ready office space along Rajarhat, New Town and Sector V — clear title, ready to build or move in.",feats:["KMDA &amp; HIDCO approved","New Town · Sector V","Clear-title verified"]}
-};
-const LISTINGS=[
-  {name:"Alipore Premium Bungalow",loc:"Alipore, South Kolkata",price:"₹6.2 Cr",specs:["4 BHK","4,200 sqft","Private garden"],world:"Luxury",img:"https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200&auto=format&fit=crop"},
-  {name:"Ballygunge Sky Residence",loc:"Ballygunge, Kolkata",price:"₹2.4 Cr",specs:["3 BHK","2,150 sqft","City views"],world:"Luxury · Family",img:"https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop"},
-  {name:"Salt Lake Family 3BHK",loc:"Salt Lake (Bidhannagar)",price:"₹1.1 Cr",specs:["3 BHK","1,550 sqft","Gated society"],world:"Family",img:"https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=1200&auto=format&fit=crop"},
-  {name:"Sector V Office Space",loc:"Sector V, Salt Lake",price:"₹95 L",specs:["Office","1,800 sqft","IT corridor"],world:"Office",img:"https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop"},
-  {name:"New Town KMDA Plot",loc:"Rajarhat · New Town corridor",price:"₹65 L",specs:["Plot","2,400 sqft","Clear title"],world:"Plots",img:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop"}
-];
-const SERVICES=[
-  {no:"01",t:"Buy",d:"Curated shortlists across all three worlds — we filter the noise so you only see homes worth your time.",img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"},
-  {no:"02",t:"Sell",d:"Position, price and market your property to the right buyer pool in Kolkata — with CT Realtor's 4.6★ reputation behind it.",img:"https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=1600&auto=format&fit=crop"},
-  {no:"03",t:"Plots & Land",d:"KMDA & HIDCO-approved plots, clear-title verification and high-yield corridor advisory across Rajarhat, New Town and the EM Bypass belt.",img:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"},
-  {no:"04",t:"Offices & Commercial",d:"Office space and commercial units in Sector V, Camac Street and New Town — every listing has a one-tap enquiry hook, so a serious buyer reaches you in seconds, not after they've moved on.",img:"https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop"}
-];
-const TESTI=[
-  {q:"They found us a bungalow in central Kolkata before it ever hit a portal. One WhatsApp, a site visit two days later, keys in six weeks.",who:"<b>Rohan &amp; Meghna</b>Bungalow buyers · Kolkata"},
-  {q:"I needed office space in Sector V fast. Tapped the enquiry button on a listing, CT Realtor called back the same hour, and we'd signed the lease within the week.",who:"<b>Arjun N.</b>Office buyer · Sector V, Kolkata"},
-  {q:"First family home and we were overwhelmed. CT Realtor narrowed 40 options to 4 that actually fit our kids' school. That's the whole job, done right.",who:"<b>The Mehtas</b>Family · Kolkata"}
-];
-
-/* ===== build cards ===== */
-const rail=document.getElementById('rail');
-LISTINGS.forEach(p=>{const el=document.createElement('article');el.className='card';
-  el.innerHTML=`<div class="card-media"><img alt="" data-src="${p.img}"/><span class="card-badge">${p.world}</span></div>
-  <div class="card-body"><h4>${p.name}</h4>
-  <div class="card-loc"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${p.loc}</div>
-  <div class="card-price">${p.price}</div>
-  <div class="card-specs">${p.specs.map(s=>`<span>${s}</span>`).join('')}</div>
-  <div class="card-foot"><a class="card-wa" href="https://wa.me/919734236920?text=Hi%20CT%20Realtor%2C%20I'm%20interested%20in%20${encodeURIComponent(p.name)}%20(${encodeURIComponent(p.price)})" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2zm4.4 12c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5L8.8 7c-.2-.4-.3-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c2.6 1 2.6.7 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
-  <a class="card-view" href="#lead">Book viewing<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>`;
-  rail.appendChild(el);});
-
-/* ===== service rows ===== */
-const srvList=document.getElementById('services-list');
-SERVICES.forEach(s=>{const b=document.createElement('button');b.className='srv-row';
-  b.onclick=()=>document.getElementById('lead').scrollIntoView({behavior:'smooth'});
-  b.innerHTML=`<div class="srv-bg"><img alt="" data-src="${s.img}"/><div class="sgrad"></div></div>
-  <div class="srv-in"><div class="srv-no">${s.no}</div><div class="srv-main"><h3>${s.t}</h3><p>${s.d}</p></div>
-  <div class="srv-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></div>`;
-  srvList.appendChild(b);});
-
-/* ===== testimonials ===== */
-const tDots=document.getElementById('tDots');let tIdx=0;
-TESTI.forEach((_,i)=>{const d=document.createElement('button');if(i===0)d.classList.add('active');d.onclick=()=>setTesti(i);tDots.appendChild(d);});
-function setTesti(i){tIdx=i;document.getElementById('tQuote').textContent=TESTI[i].q;document.getElementById('tWho').innerHTML=TESTI[i].who;[...tDots.children].forEach((d,j)=>d.classList.toggle('active',j===i));}
-setInterval(()=>setTesti((tIdx+1)%TESTI.length),6500);
-
-/* ===== lazy img ===== */
-function lazyLoad(img){const src=img.getAttribute('data-src');if(!src)return;const p=new Image();p.onload=()=>{img.src=src;img.classList.add('show');};p.src=src;}
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){lazyLoad(e.target);io.unobserve(e.target);}});},{rootMargin:"300px"});
-document.querySelectorAll('img[data-src]').forEach(i=>io.observe(i));
-
-/* ===== world switcher ===== */
-function setWorld(w){const d=WORLDS[w];if(!d)return;document.body.dataset.world=w;
-  document.getElementById('wTag').textContent=d.wTag;
-  document.getElementById('wTitle').innerHTML=d.wTitle;
-  document.getElementById('wText').textContent=d.wText;
-  document.getElementById('wFeats').innerHTML=d.feats.map(f=>`<span>${f}</span>`).join('');
-  const wb=document.getElementById('wBtn'); if(wb) wb.childNodes[0].nodeValue=d.btn+' ';
-  document.querySelectorAll('#stage .layer').forEach(l=>{const on=l.dataset.world===w;l.classList.toggle('active',on);
-    const v=l.querySelector('video');if(v){ if(on){v.play().catch(()=>{});} else {v.pause();} }});
-  document.querySelectorAll('#worldTabs button').forEach(b=>b.classList.toggle('active',b.dataset.world===w));}
-document.querySelectorAll('#worldTabs button').forEach(b=>b.addEventListener('click',()=>setWorld(b.dataset.world)));
-// play the active world video only while the stage is on screen (saves battery)
-(()=>{const stage=document.getElementById('stage');if(!stage)return;
-  new IntersectionObserver((es)=>es.forEach(e=>{const v=stage.querySelector('.layer.active video');if(!v)return;
-    if(e.isIntersecting)v.play().catch(()=>{});else v.pause();}),{threshold:.15}).observe(stage);})();
-// pause hero/why autoplay videos while offscreen — keeps phones cool and scroll smooth
-document.querySelectorAll('video[autoplay]').forEach(v=>{
-  new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){v.play().catch(()=>{});}else{v.pause();}}),{rootMargin:'80px'}).observe(v);
-});
-
-/* ===== header + lenis ===== */
-const REDUCED=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const FINE=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-const hdr=document.getElementById('hdr');function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>40);}onScroll();
-let lenis;
-if(window.Lenis&&!REDUCED){lenis=new Lenis({lerp:0.08,duration:1.25,wheelMultiplier:0.95,smoothWheel:true,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t))});
-  function raf(t){lenis.raf(t);requestAnimationFrame(raf);}requestAnimationFrame(raf);lenis.on('scroll',onScroll);
-  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length<2)return;const t=document.querySelector(id);if(!t)return;e.preventDefault();lenis.scrollTo(t,{offset:-10});}));}
-else{addEventListener('scroll',onScroll);}
-
-/* ===== reveals + hero parallax (findrealestate mechanic: ease:none scrub) ===== */
-if(window.gsap&&window.ScrollTrigger){
-  gsap.registerPlugin(ScrollTrigger);
-  // single rAF driver: the lenis loop above already runs; ticker double-drive caused frame jank
-  if(lenis){lenis.on('scroll',ScrollTrigger.update);}
-  if(REDUCED){document.querySelectorAll('.rv,#arrowsSec').forEach(el=>el.classList.add('in'));}
-  else{
-  gsap.utils.toArray('.rv').forEach(el=>ScrollTrigger.create({trigger:el,start:"top 88%",once:true,onEnter:()=>el.classList.add('in')}));
-  ScrollTrigger.create({trigger:'#arrowsSec',start:"top 72%",once:true,onEnter:()=>document.getElementById('arrowsSec').classList.add('in')});
-  }
-  // ---- HERO: sticky-stage scroll-scrubbed parallax — the house POPS (ease:none) ----
-  if(document.querySelector('.hero-scroll')&&!REDUCED){
-    const ST={trigger:'.hero-scroll',start:'top top',end:'bottom bottom',scrub:true};
-    // house card rises + grows + sharpens (pops out, no white wash)
-    gsap.fromTo('.hero-house',{xPercent:-50,yPercent:14,scale:.9},
-      {xPercent:-50,yPercent:-14,scale:1.1,ease:'none',scrollTrigger:ST});
-    // box-shadow + filter scrubs repaint every frame — too heavy for phone GPUs, desktop only
-    if(FINE){
-    gsap.fromTo('.hero-house-inner',
-      {boxShadow:'0 18px 46px -34px rgba(21,23,23,.3)'},
-      {boxShadow:'0 80px 140px -34px rgba(21,23,23,.6)',ease:'none',scrollTrigger:ST});
-    gsap.to('.hero-house video',{filter:'saturate(1.16) contrast(1.08) brightness(1.05)',ease:'none',scrollTrigger:ST});
-    }
-    gsap.fromTo('.hero-house-glow',{opacity:.3,scale:.9},{opacity:.7,scale:1.06,ease:'none',scrollTrigger:ST});
-    // clouds part outward + drift up
-    gsap.to('.c1',{xPercent:-65,yPercent:-22,ease:'none',scrollTrigger:ST});
-    gsap.to('.c2',{xPercent:65,yPercent:-28,ease:'none',scrollTrigger:ST});
-    gsap.to('.c3',{yPercent:-44,opacity:0,ease:'none',scrollTrigger:ST});
-    // giant wordmark lifts, grows, fades as the house takes over
-    gsap.to('.hero-word',{yPercent:-18,scale:1.14,opacity:0,ease:'none',
-      scrollTrigger:{trigger:'.hero-scroll',start:'top top',end:'56% bottom',scrub:true}});
-    // overlay copy lifts then clears, late, so it reads for most of the scroll
-    gsap.to('.hero-overlay',{yPercent:-18,ease:'none',scrollTrigger:ST});
-    gsap.to('.hero-overlay .container',{opacity:0,ease:'none',
-      scrollTrigger:{trigger:'.hero-scroll',start:'62% top',end:'88% bottom',scrub:true}});
-    gsap.to('.scroll-cue',{opacity:0,ease:'none',
-      scrollTrigger:{trigger:'.hero-scroll',start:'top top',end:'14% top',scrub:true}});
-    // gentle white hand-off ONLY at the very end — image stays crisp until then
-    gsap.fromTo('.hero-smoke',{opacity:0},{opacity:1,ease:'none',
-      scrollTrigger:{trigger:'.hero-scroll',start:'80% top',end:'bottom bottom',scrub:true}});
-
-    // ---- interactive: pointer tilt + shine on the house card ----
-    const stage=document.querySelector('.hero-stage');
-    const inner=document.querySelector('.hero-house-inner');
-    const shine=document.querySelector('.hero-house-shine');
-    if(stage&&inner&&FINE){
-      let raf=null;
-      stage.addEventListener('mousemove',e=>{
-        const r=stage.getBoundingClientRect();
-        const px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
-        if(raf)cancelAnimationFrame(raf);
-        raf=requestAnimationFrame(()=>{
-          inner.style.transform=`rotateY(${px*7}deg) rotateX(${-py*6}deg)`;
-          if(shine){shine.style.opacity=.85;shine.style.transform=`translateX(${px*70}px)`;}
-        });
-      });
-      stage.addEventListener('mouseleave',()=>{inner.style.transform='';if(shine)shine.style.opacity=0;});
-    }
-  }
-}else{
-  const rio=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}}),{threshold:.12});
-  document.querySelectorAll('.rv,#arrowsSec').forEach(el=>rio.observe(el));
-}
-/* ===== forms ===== */
-document.getElementById('heroSearch').addEventListener('submit',e=>{e.preventDefault();document.getElementById('inventory').scrollIntoView({behavior:'smooth'});});
-document.getElementById('leadForm').addEventListener('submit',e=>{e.preventDefault();const f=e.target;
-  const name=encodeURIComponent(f.name.value||'there'),phone=encodeURIComponent(f.phone.value||''),look=encodeURIComponent(f.looking.value),budget=encodeURIComponent(f.budget.value);
-  document.getElementById('formOk').classList.add('show');f.style.display='none';
-  setTimeout(()=>window.open(`https://wa.me/919734236920?text=Hi%20CT%20Realtor%2C%20I'm%20${name}%20(${phone}).%20Looking%20for%3A%20${look}%2C%20budget%20${budget}.`,'_blank'),1400);});
-</script>
+<script src="app.js"></script>
 </body>
 </html>
