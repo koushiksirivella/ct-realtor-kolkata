@@ -491,8 +491,27 @@ footer{border-top:1px solid var(--line);background:var(--band)}
 /* ===== reveal ===== */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .rv.in{opacity:1;transform:none}
-.concept-flag{position:fixed;bottom:18px;right:18px;z-index:80;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink-80)}
+.concept-flag{position:fixed;bottom:84px;right:24px;z-index:80;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink-80)}
 @media(max-width:760px){.concept-flag{display:none}}
+
+/* prev / next page arrows (bottom corners) */
+.pagenav{position:fixed;bottom:24px;z-index:78;display:inline-flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:100px;padding:10px 18px;color:var(--ink);
+  box-shadow:0 16px 38px -18px rgba(21,23,23,.45);transition:transform .35s var(--ease),box-shadow .35s}
+.pagenav:hover{transform:translateY(-3px);box-shadow:0 22px 48px -18px rgba(21,23,23,.55)}
+.pagenav.prev{left:24px}
+.pagenav.next{right:24px}
+.pagenav .pn-txt{display:flex;flex-direction:column;line-height:1.12}
+.pagenav .pn-txt small{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.pagenav .pn-txt b{font-size:13.5px;font-weight:600}
+.pagenav svg{width:20px;height:20px;stroke:var(--gold);flex:none;transition:transform .35s var(--ease)}
+.pagenav.prev:hover svg{transform:translateX(-3px)}
+.pagenav.next:hover svg{transform:translateX(3px)}
+@media(max-width:760px){
+  .pagenav{bottom:76px;padding:0;width:46px;height:46px;justify-content:center;border-radius:50%}
+  .pagenav .pn-txt{display:none}
+}
 
 /* ===========================================================
    MOTION POLISH — all transform/opacity (GPU), no repaint scrubs

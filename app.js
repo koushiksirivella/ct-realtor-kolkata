@@ -228,6 +228,17 @@ function buildStickyWa(){
   const wipe=document.createElement('div');wipe.className='pagewipe';
   wipe.innerHTML=`<div class="pw-mark"><div class="pw-line"></div><b>CT Realtor</b><span>Salt Lake · Since 2004</span></div>`;
   document.body.appendChild(wipe);
+  // prev / next page arrows (bottom corners) — follow nav order, use the wipe transition
+  const idx=NAV.findIndex(n=>n.key===PAGE);
+  let prev, next;
+  if(idx===-1){ prev={h:'properties.html',label:'Properties'}; next={h:'contact.html',label:'Contact'}; }
+  else { prev=NAV[idx-1]; next=NAV[idx+1]; }
+  const RARR='<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  const LARR='<svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
+  if(prev){const a=document.createElement('a');a.className='pagenav prev';a.href=prev.h;a.setAttribute('aria-label','Previous page: '+prev.label);
+    a.innerHTML=LARR+'<span class="pn-txt"><small>Prev</small><b>'+prev.label+'</b></span>';document.body.appendChild(a);}
+  if(next){const a=document.createElement('a');a.className='pagenav next';a.href=next.h;a.setAttribute('aria-label','Next page: '+next.label);
+    a.innerHTML='<span class="pn-txt" style="text-align:right"><small>Next</small><b>'+next.label+'</b></span>'+RARR;document.body.appendChild(a);}
   const burger=document.getElementById('burger');
   if(burger)burger.addEventListener('click',()=>document.body.classList.toggle('menu-open'));
   mm.querySelectorAll('a[href]').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
